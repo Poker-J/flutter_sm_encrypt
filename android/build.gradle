@@ -1,0 +1,36 @@
+group 'com.wit.encrypt.sm_encrypt'
+version '1.0'
+
+buildscript {
+    repositories {
+        google()
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:4.1.0'
+    }
+}
+
+rootProject.allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 30
+
+    defaultConfig {
+        minSdkVersion 16
+    }
+}
+
+dependencies {
+
+    implementation 'cn.hutool:hutool-crypto:5.7.9'
+    implementation 'org.bouncycastle:bcprov-jdk15to18:1.69'
+}
